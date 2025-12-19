@@ -1,0 +1,26 @@
+{
+  "name": "hello-typescript",
+  "version": "1.0.0",
+  "description": "**Este es  un modulo dedicado a entender los conceptos desde basicos hasta lo avanzado del lenguaje de programación TypeScript**",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "ts-node Basics/01-basic-types.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JheisonQuiroga/hello-typescript.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JheisonQuiroga/hello-typescript/issues"
+  },
+  "homepage": "https://github.com/JheisonQuiroga/hello-typescript#readme",
+  "devDependencies": {
+    "@types/node": "^25.0.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
