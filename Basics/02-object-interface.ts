@@ -7,18 +7,20 @@ const numberArray2: Array<number> = [1, 2, 3];
 const mixedArray: (string | number | boolean)[] = ['strawberry', 5, true];
 
 /* Object Types */
-/* Un interfaz se utiliza para definir la estructura de un objeto */
+/* Un interfaz se utiliza para definir la estructura de un objeto y se usa para
+tipar los objetos, además su sintaxis de escritura se define con UpperCamelCase */
 interface Hero {
   name: string;
   hp: number;
   isAlive: boolean;
   abilities: string[];
   // Optional property
-  address?: {
-    street: string;
-    // Optional property
-    city: string | undefined;
-  }
+  address?: Address;
+}
+
+interface Address {
+  street: string;
+  city?: string;
 }
 
 const hero: Hero = {
