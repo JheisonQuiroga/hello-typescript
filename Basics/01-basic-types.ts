@@ -1,3 +1,5 @@
+import './02-object-interface';
+
 const name: string = "Duban";
 let hpPoints: number | 'FULL' = 100;
 let isAlive: boolean = true;

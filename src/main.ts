@@ -1,0 +1,1 @@
+import '../Basics/02-object-interface';
