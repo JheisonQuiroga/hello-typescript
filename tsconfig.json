@@ -10,6 +10,13 @@
     "module": "nodenext",
     "target": "esnext",
     "types": ["node"],
+
+    "moduleResolution": "nodenext",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "dist",
+
     // For nodejs:
     // "lib": ["esnext"],
     // "types": ["node"],
@@ -35,7 +42,7 @@
     // Recommended Options
     "strict": true,
     "jsx": "react-jsx",
-    "verbatimModuleSyntax": true,
+    "verbatimModuleSyntax": false,
     "isolatedModules": true,
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",

@@ -1,4 +1,5 @@
 // import '../Basics/02-object-interface';
 // import '../Basics/03-functions';
-import '../Basics/04-object-destructuring';
-import '../Basics/05-function-destructuring';
+// import '../Basics/04-object-destructuring.js';
+// import '../Basics/05-function-destructuring.js';
+import '../Basics/06-import-export.js';
