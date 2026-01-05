@@ -47,5 +47,8 @@
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
     "skipLibCheck": true,
+
+    // Decorators
+    "experimentalDecorators": true
   }
 }
