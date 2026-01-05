@@ -17,6 +17,13 @@ export class Person {
   public greet(): string {
     return `Hello, my name is ${ this.name } and I am ${ this.age } years old!`;
   }
+
+  public set setAge( age: number ) {
+    if ( age < 0 ) {
+      throw new Error('Age can not be negative!');
+    }
+    this.age = age;
+  }
 }
 
 // Inheritance
@@ -42,6 +49,9 @@ class Hero {
   constructor(private power: string, public realName: string, person: Person, age?: number ) {
     this.person = person;
     this.power = power;
+    if ( age ) {
+      this.person.setAge = age;
+    }
   }
 
   public showPower(): string {
@@ -54,6 +64,8 @@ console.log(tony.name);
 // console.log(bruceWayne.age);
 console.log(tony.greet());
 
-const ironman = new Hero('Technology', 'Ironman', tony, 45);
+const ironman = new Hero('Technology', 'Ironman', tony, 50);
 // console.log(ironman.greet());
+console.log(ironman.person.greet());
+console.log(ironman.realName);
 console.log(ironman.showPower());
