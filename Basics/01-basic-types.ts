@@ -1,4 +1,4 @@
-import './02-object-interface';
+import './02-object-interface.js';
 
 const name: string = "Duban";
 let hpPoints: number | 'FULL' = 100;

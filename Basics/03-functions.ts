@@ -1,3 +1,11 @@
+function sayHello( msg?: string ): void {
+  const message = msg || "Hello World!";
+  console.log( message );
+}
+
+sayHello();
+sayHello("Hola TypeScript!");
+
 function addNumbers(a: number, b: number): number {
   return a + b;
 }

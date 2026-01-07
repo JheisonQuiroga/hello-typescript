@@ -31,5 +31,6 @@ const printChildren = ( passenger: Passenger ): void => {
   // console.log( firstChild );
 }
 
+console.log("Hola mundo desde TypeScript");
 printChildren( passenger1 );
 printChildren( passenger2 );
