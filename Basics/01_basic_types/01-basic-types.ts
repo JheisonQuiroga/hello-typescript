@@ -1,4 +1,4 @@
-import './02-object-interface.js';
+import '../02-object-interface.js';
 
 
 // Strings
