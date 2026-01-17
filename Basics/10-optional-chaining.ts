@@ -18,7 +18,7 @@ const passenger2: Passenger = {
 const printChildren = ( passenger: Passenger ): void => {
   const howManyChildren = passenger.children?.length ?? 0;
   
-  // not null assertion operator
+  // not null assertion operator (!)
   
   /* Le indica a TypeScript que estamos seguros que el valor no será 
   null o undefined en ese punto, por lo que no lanzará un error de compilación. */
