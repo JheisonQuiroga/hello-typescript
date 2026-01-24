@@ -8,3 +8,4 @@
 // import '../Basics/09-decorators.js';
 // import '../Basics/10-optional-chaining.js';
 import '../Basics/01_basic_types/02-arrays.js';
+import '../Basics/11-enum.js';

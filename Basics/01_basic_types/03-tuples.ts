@@ -9,16 +9,16 @@
 // 1. BASIC TUPLE DECLARATION
 // ============================================
 
-// Define a tuple with types at each position
+// Definiendo tipos de una tupla con distintos tipos de datos
 let tuple1: [string, number] = ["hello", 42];
 console.log(tuple1[0]); // "hello" (string)
 console.log(tuple1[1]); // 42 (number)
 
-// Accessing tuple elements
+// Accediendo a los elementos de una tupla
 const firstName: string = tuple1[0];
 const age: number = tuple1[1];
 
-// ❌ These would cause errors:
+// ❌ Errores de asignación
 // tuple1 = [42, "hello"];           // Wrong type order
 // tuple1 = ["hello", 42, true];     // Too many elements
 // tuple1 = ["hello"];               // Missing required element
@@ -28,7 +28,7 @@ const age: number = tuple1[1];
 // 2. TUPLES WITH MULTIPLE TYPES
 // ============================================
 
-// Three-element tuple
+// Tupla con más de dos tipos de datos
 let user: [string, number, boolean] = ["Alice", 30, true];
 //        [name,    age,    isActive]
 
@@ -42,14 +42,13 @@ console.log(isAdmin); // true
 // 3. OPTIONAL TUPLE ELEMENTS
 // ============================================
 
-// Make the last element optional using ?
+// Hacer un elemento opcional en una tupla
 let response: [string, number?] = ["success"];
 console.log(response); // ["success"]
 
 response = ["success", 200];
 console.log(response); // ["success", 200]
 
-// More complex optional tuple
 let coordinates: [number, number, string?] = [10, 20];
 coordinates = [10, 20, "northwest"];
 
@@ -58,13 +57,13 @@ coordinates = [10, 20, "northwest"];
 // 4. REST ELEMENTS IN TUPLES
 // ============================================
 
-// Tuple with rest elements - first element is string, followed by any numbers
+// Tupla con elementos rest
 let list: [string, ...number[]] = ["id", 1, 2, 3, 4, 5];
 console.log(list[0]); // "id" (string)
 console.log(list[1]); // 1 (number)
 console.log(list); // ["id", 1, 2, 3, 4, 5]
 
-// Tuple with mixed rest elements
+// Tupla con rest de booleanos
 let data: [string, number, ...boolean[]] = ["status", 200, true, false, true];
 
 
@@ -72,14 +71,14 @@ let data: [string, number, ...boolean[]] = ["status", 200, true, false, true];
 // 5. NAMED TUPLE ELEMENTS
 // ============================================
 
-// Named tuples make the code more readable
+// Tupla con elementos nombrados, usando alias de tipo, hacen el código más legible
 type UserInfo = [name: string, age: number, admin: boolean];
 let userInfo: UserInfo = ["Bob", 25, false];
 
-// With destructuring
+// Destructuración
 const [userName, userAge2, isUserAdmin] = userInfo;
 
-// You can also use this syntax without a type alias
+// También se puede usar la sintaxis de elementos nombrados directamente en la declaración
 let employee: [firstName: string, lastName: string, salary: number] = 
   ["John", "Doe", 50000];
 
@@ -88,7 +87,7 @@ let employee: [firstName: string, lastName: string, salary: number] =
 // 6. USE CASE: RETURNING MULTIPLE VALUES
 // ============================================
 
-// Function that returns a tuple
+// Función que retorna una tupla
 function getUserData(): [string, number, string] {
   const name = "Charlie";
   const age = 35;
@@ -96,7 +95,7 @@ function getUserData(): [string, number, string] {
   return [name, age, email];
 }
 
-// Usage with destructuring
+// Usada con destructuración
 const [userName2, userAge3, userEmail] = getUserData();
 console.log(`${userName2} is ${userAge3} years old`);
 
@@ -105,105 +104,17 @@ console.log(`${userName2} is ${userAge3} years old`);
 // 7. USE CASE: FUNCTION PARAMETERS
 // ============================================
 
-// Function that accepts a tuple as parameter
+// Función que acepta una tupla como parámetro
 function logPoint(point: [number, number]): void {
   console.log(`X: ${point[0]}, Y: ${point[1]}`);
 }
 
 logPoint([10, 20]);
 
-// With named parameters
+// Con parámetros nombrados
 function logCoordinate(coord: [x: number, y: number, z?: number]): void {
   console.log(`Position: (${coord[0]}, ${coord[1]}${coord[2] ? `, ${coord[2]}` : ""})`);
 }
 
 logCoordinate([5, 10]);
 logCoordinate([5, 10, 15]);
-
-
-// ============================================
-// 8. USE CASE: API RESPONSE HANDLING
-// ============================================
-
-type ApiResponse = [status: number, message: string, data?: Record<string, unknown>];
-
-function handleResponse(response: ApiResponse): void {
-  const [status, message, data] = response;
-  
-  console.log(`Status: ${status}`);
-  console.log(`Message: ${message}`);
-  
-  if (data) {
-    console.log(`Data:`, data);
-  }
-}
-
-handleResponse([200, "Success", { id: 1, name: "Product" }]);
-handleResponse([404, "Not Found"]);
-
-
-// ============================================
-// 9. READONLY TUPLES
-// ============================================
-
-// Prevent modification of tuple elements
-let readonlyTuple: readonly [string, number] = ["immutable", 100];
-// readonlyTuple[0] = "changed";  // ❌ Error: Cannot assign to readonly
-
-// Readonly with rest elements
-let readonlyList: readonly [string, ...number[]] = ["id", 1, 2, 3];
-
-
-// ============================================
-// 10. TUPLES VS ARRAYS - COMPARISON
-// ============================================
-
-// TUPLE - Fixed length, specific types at each position
-let myTuple: [string, number, boolean] = ["hello", 42, true];
-
-// ARRAY - Variable length, uniform type
-let myArray: (string | number | boolean)[] = ["hello", 42, true, "world"];
-
-// Key differences:
-// - Tuple: Type safety for specific positions
-// - Array: More flexible length, good for collections of same type
-// - Tuple: Better for structured data (like function returns)
-// - Array: Better for variable-length collections
-
-
-// ============================================
-// 11. COMPLEX TUPLE EXAMPLES
-// ============================================
-
-// Matrix representation
-type Matrix = [
-  [number, number, number],
-  [number, number, number],
-  [number, number, number]
-];
-
-const identityMatrix: Matrix = [
-  [1, 0, 0],
-  [0, 1, 0],
-  [0, 0, 1]
-];
-
-// Result with success/error tuple
-type Result = 
-  | [success: true, data: string]
-  | [success: false, error: Error];
-
-function processData(): Result {
-  try {
-    return [true, "Data processed"];
-  } catch (e) {
-    return [false, e as Error];
-  }
-}
-
-const [success, payload] = processData();
-if (success) {
-  console.log("Data:", payload);
-} else {
-  console.log("Error:", (payload as Error).message);
-}
