@@ -44,6 +44,7 @@
     "noImplicitAny": false, /* Permite expresiones y declaraciones de Tipo Any 
     Lo recomendable es dejar la opcion en true.
     */
+    "strictNullChecks": true,
     "jsx": "react-jsx",
     "verbatimModuleSyntax": false,
     "isolatedModules": true,
