@@ -8,6 +8,6 @@ let name: string | null = "John Doe";
 
 
 // 2. strictNullChecks: false
-// Cuando strictNullChecks está en false, null y undefined son parte de todos los tipos
+// Cuando strictNullChecks está en false, null y undefined pueden ser parte de todos los tipos
 
 // let isActive: boolean = undefined;
