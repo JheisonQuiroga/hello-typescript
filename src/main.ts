@@ -1,5 +1,5 @@
 // import '../Basics/02-object-interface';
-// import '../Basics/03-functions';
+import '../Basics/02_functions/03-functions.js';
 // import '../Basics/04-object-destructuring.js';
 // import '../Basics/05-function-destructuring.js';
 // import '../Basics/06-import-export.js';
@@ -7,5 +7,6 @@
 // import '../Basics/08-generics.js';
 // import '../Basics/09-decorators.js';
 // import '../Basics/10-optional-chaining.js';
-import '../Basics/01_basic_types/02-arrays.js';
-import '../Basics/11-enum.js';
+// import '../Basics/01_basic_types/02-arrays.js';
+// import '../Basics/11-enum.js';
+import '../Basics/02_functions/04-exercise.js';

@@ -1,4 +1,4 @@
-import '../02-object-interface.js';
+import '../03-object-interface.js';
 
 
 // Strings
@@ -32,7 +32,8 @@ let nickname; /* Variable implicita de tipo any - undefined */
 
 /// Casteo de tipos de datos
 /* El casteo es un trato de tipo de dato superficial, es decir tratar un tipo de dato
-    como otro tipo de dato, sin realmente alterarlo. */
+    como otro tipo de dato, sin realmente alterarlo.
+    Convierte tipos de datos compatibles entre si.  */
 
 superHeroName = 123;
 superHeroName = 123.34343423;
