@@ -36,6 +36,16 @@ sayHelloArrowFunc();
 sayHelloArrowFunc("Hola mundo desde una función de flecha!")
 
 // 1.2. Optional parameters
+/* Por lo general los parámetros opcionales se definen al final de la lista de parámetros.
+    * Si un parámetro opcional no se proporciona al llamar a la función, su valor será
+    * undefined */
+
+function completeName( firstName: string, lastName?: string ): string {
+  return ` ${ firstName } ${ lastName || ""}`.trim();
+}
+
+console.log(completeName("John"));
+console.log(completeName("John", "Doe"));
 
 function multiplyNumbers(n1: number, n2?: number, base: number = 2): number {
   if (n2 === undefined) {
@@ -133,7 +143,7 @@ myFunction( function( msg: string ) {
   console.log(msg);
 })
 
-// 1.8. Call Signatures
+// 1.8. Call Signatures - Firmas de llamada
 
 type DescribableFunction = {
   description: string;
@@ -148,7 +158,7 @@ function myFunct( someArg: number ): boolean {
   return someArg > 3;
 }
 
-myFunct.description = "Default description"; 
+myFunct.description = "Default description";
 
 doSomething(myFunct);
 
