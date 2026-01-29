@@ -1,4 +1,4 @@
-import '../03-object-interface.js';
+import '../03_objects/03-object-interface.js';
 
 
 // Strings
@@ -44,9 +44,9 @@ nickname = 'The Dark Knight';
 
 
 console.log({
-  name,
-  hpPoints,
-  isAlive,
+    name,
+    hpPoints,
+    isAlive,
 });
 
 // Se utiliza el export para convertir el archivo en un módulo.

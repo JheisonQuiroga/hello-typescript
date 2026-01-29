@@ -5,6 +5,7 @@ const numberArray: number[] = [1, 2, 3, 4, 5];
 const numberArray2: Array<number> = [1, 2, 3];
 
 const mixedArray: (string | number | boolean)[] = ['strawberry', 5, true];
+const mixedArray2: Array<string | number | boolean> = ["Watermenlon", 10, true];
 
 /* Object Types */
 /* Un interfaz se utiliza para definir la estructura de un objeto y se usa para
