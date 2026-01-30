@@ -30,10 +30,14 @@ hpPoints = 'FULL';
 let superHeroName: any = 'Batman';
 let nickname; /* Variable implicita de tipo any - undefined */
 
-/// Casteo de tipos de datos
+/// Casteo de tipos de datos - Type Casting or Type Assertion (Aserción de tipos).
 /* El casteo es un trato de tipo de dato superficial, es decir tratar un tipo de dato
     como otro tipo de dato, sin realmente alterarlo.
-    Convierte tipos de datos compatibles entre si.  */
+    Convierte tipos de datos compatibles entre si.  
+    Las aserciones de tipo se utilizan para indicarle al compilador que trate una variable
+    como un tipo de dato especifico.
+    Hay dos formas de hacer un casteo de tipo en TypeScript:
+    */
 
 superHeroName = 123;
 superHeroName = 123.34343423;
