@@ -7,6 +7,10 @@ const name: string = "Duban";
 const lastname: string = 'Quiroga';
 // const nickname; // Esto marca un error
 
+// Const 
+/* Una constante infiere el tipo de dato a partir del valor asignado, y además su tipo
+es el valor literal asignado. */
+
 
 console.log(`I'm ${name} ${lastname}`);
 

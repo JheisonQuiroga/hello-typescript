@@ -5,7 +5,7 @@
  * terminan su ejecución normalmente (por ejemplo, bucles infinitos).
  */
 
-// Función que lanza un error
+// Función que lanza un error, retorna un throw, más nunca un valor.
 function throwError(): never {
   throw new Error("This is an error");
 }
