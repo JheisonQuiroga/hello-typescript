@@ -1,5 +1,9 @@
 /**
- * 1. Literal Object
+ * 1. Objects In TypeScript 
+ */
+
+/**
+ * 1.1 Literal Object
  */
 
 
@@ -21,6 +25,7 @@ person = {
 console.log(person);
 
 // 1.1. Object with explicit type
+/* Definiendo el tipo de forma explicita o anonima */
 
 let person2: { name: string; lastName: string; age: number; isActive: boolean; } = {
   name: "Duban",
@@ -31,8 +36,9 @@ let person2: { name: string; lastName: string; age: number; isActive: boolean; }
 
 console.log({person2});
 
-
+// ============================================
 // 2. Object Types
+// ============================================
 
 // Definiendo el tipo de un objeto de forma anónima
 
@@ -55,7 +61,9 @@ function printPersonInfo( person: Person ): void {
 
 printPersonInfo({ name: "Bruce", lastName: "Wayne" });
 
+// ============================================
 // 3. Property Modifiers
+// ============================================
 
 // 3.1. Optional Properties
 /** 
@@ -92,3 +100,46 @@ superHero = {
     return this.name;
   }
 }
+
+// 3.3. Allowed Multiple Types
+
+type NewPerson = {
+  name: string;
+  age: (number | string); // Age can be a number or a string
+  otherProperty?: (string | number | boolean);
+}
+
+const personA: NewPerson = {
+  name: "Duban",
+  age: "Quiroga",
+  otherProperty: true,
+}
+
+console.log("====== Allowed Multiple Types ======");
+console.log({personA})
+console.log("====================================");
+
+// 3.4. readonly Properties
+
+/** 
+ * * Las propiedades tambien pueden ser de solo lectura, es decir que no pueden ser modificadas
+ * * en tiempo de ejecucion, ni reasignadas en el código.
+*/
+
+type SomeType = {
+  readonly prop: string;
+}
+
+function doSomething( obj: SomeType ) {
+  console.log(obj.prop);
+
+  try {
+    // obj.prop = "New Value"; // Esto genera un error de compilación
+  } catch ( error ) {
+    console.error("Cannot reassign a readonly property");
+  }
+}
+
+doSomething( { prop: "Initial Value" } );
+
+export {};
