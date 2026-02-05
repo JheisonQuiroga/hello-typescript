@@ -1,6 +1,8 @@
-/// Arrays
+// ============================================
+// 1. ARRAYS
+// ============================================
 
-// Formas de tipar un Array
+// 1.1. Formas de tipar un Array
 
 const numbers: number[] = [1, 2, 3, 4, 5];
 const numbers2: Array<number> = [1, 2, 3, 4, 5];
@@ -10,8 +12,8 @@ const strings2: Array<string> = ['a'];
 
 // Multiples tipos de datos en un Array
 
-const variable: (string | number | boolean)[] = ["a", 2, true];
-const variable2: Array<string | number | boolean> = ["a", 2, true];
+const variable: (string | number | boolean)[] = ["a", 2, true, "b", 3, false];
+const variable2: Array<string | number | boolean> = ["a", 2, true, "b", 3, false];
 
 // Funciones comunes de los Arrays
 

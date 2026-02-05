@@ -81,6 +81,27 @@ age = 26;
 age = "26";
 age = null;
 
+/*  Narrow with Union Types
+    * Para trabajar correctamente con los union types, se debe utilizar un narrow con el 
+    * union type, esto para poder deducir un tipo de dato especifico. Se verifica el tipo de
+    * dato para poder trabajar con el y poder realizar operaciones. 
+*/
+
+function printAge(age: number | string | null): void {
+    if (typeof age === "number") {
+        console.log(age.toFixed());
+    } else if (typeof age === "string") {
+        console.log(age.toUpperCase());
+    } else {
+        console.log(age);
+    }
+}
+
+printAge(age);
+printAge(26);
+printAge("26");
+printAge(null);
+
 // ============================================
 // 3. LITERAL TYPES
 // ============================================

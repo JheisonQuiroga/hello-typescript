@@ -37,7 +37,7 @@ const batman: Hero = {
   isAlive: false,
   abilities: ['rich', 'intelligent'],
   address: {
-    street: 'Unkown',
+    street: 'Unknown',
     city: 'Gotham'
   }
 }

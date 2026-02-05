@@ -1,6 +1,6 @@
-/**
- * 1. Objects In TypeScript 
- */
+/// ============================================
+// 1. OBJECTS IN TYPESCRIPT
+// ============================================
 
 /**
  * 1.1 Literal Object
@@ -25,7 +25,9 @@ person = {
 console.log(person);
 
 // 1.1. Object with explicit type
-/* Definiendo el tipo de forma explicita o anonima */
+/* Definiendo el tipo de forma explicita, anonima o en línea.
+  * Esta es la forma no recomendada de tipar un objeto.
+*/
 
 let person2: { name: string; lastName: string; age: number; isActive: boolean; } = {
   name: "Duban",
@@ -60,6 +62,17 @@ function printPersonInfo( person: Person ): void {
 }
 
 printPersonInfo({ name: "Bruce", lastName: "Wayne" });
+
+// 2.3. Import types from other files
+
+import type { User } from "./00-types.js";
+
+const user: User = {
+  id: 0,
+  username: "jheisonquiroga",
+  email: "jheison@fake.com",
+  isDeveloper: true
+}
 
 // ============================================
 // 3. Property Modifiers
@@ -141,5 +154,23 @@ function doSomething( obj: SomeType ) {
 }
 
 doSomething( { prop: "Initial Value" } );
+
+// 4. Index Signatures
+
+/**
+ * * Las firmas de índice permiten definir propiedades que no se conocen de antemano,
+ * * pero que deben cumplir con un determinado tipo.
+*/
+
+interface StringArray {
+  [index: number]: string;
+}
+
+const myStringArray: StringArray = ["Hello", "World", "TypeScript"];
+
+console.log(myStringArray[0]);
+
+
+
 
 export {};
