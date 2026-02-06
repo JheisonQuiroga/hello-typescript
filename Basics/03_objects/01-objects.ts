@@ -155,10 +155,12 @@ function doSomething( obj: SomeType ) {
 
 doSomething( { prop: "Initial Value" } );
 
+// ============================================
 // 4. Index Signatures
+// ============================================
 
 /**
- * * Las firmas de índice permiten definir propiedades que no se conocen de antemano,
+ * * Las firmas de índice permiten definir propiedades o claves que no se conocen de antemano,
  * * pero que deben cumplir con un determinado tipo.
 */
 
@@ -170,7 +172,63 @@ const myStringArray: StringArray = ["Hello", "World", "TypeScript"];
 
 console.log(myStringArray[0]);
 
+// Common problem
+
+interface NumberDictionary {
+  [index: string]: number | string;
+  length: number;
+  name: string; // Esto genera error porque la propiedad name no es de tipo number, se soluciona con un Union Type
+}
+
+let myNumberDictionrary: NumberDictionary = {
+  length: 10,
+  name: "10",
+}
+
+myNumberDictionrary["key1"] = 5;
+myNumberDictionrary["key2"] = 5;
+myNumberDictionrary["key3"] = 5;
+
+console.log({myNumberDictionrary});
+console.log(myNumberDictionrary.length);
+
+// Use cases of index signatures
+
+interface Salary {
+  [employeeName: string]: number;
+}
+
+const salaries: Salary = {
+  "Duban": 50000,
+  "Clark": 10000,
+  "Bruce": 200000
+}
+
+console.log(salaries["Duban"]);
+console.log(salaries["Clark"]); 
+console.log(salaries["Bruce"]);
 
 
+// ============================================
+// 5. Intersection Types with Objects
+// ============================================
+
+/**
+ * * Más de un tipo de objeto combinado en uno solo.
+ */
+
+type UserBirthDay = {
+  dateOfBirth: Date;
+}
+
+type UserEntity = User & UserBirthDay;
+
+const newUser: UserEntity = {
+  id: 1,
+  username: "JheisonQuiroga",
+  email: "noemail",
+  isDeveloper: true,
+  dateOfBirth: new Date("1998-06-19"),
+}
 
 export {};

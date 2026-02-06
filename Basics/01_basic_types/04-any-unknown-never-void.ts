@@ -19,7 +19,7 @@ const result = anyThing + 10;
 // ============================================
 
 /* 
-    *El tipo de dato Unknown es similar a Any, pero es más seguro y **estricto**.
+    * El tipo de dato Unknown es similar a Any, pero es más seguro y **estricto**.
     * No permite realizar operaciones o acceder a propiedades sin antes hacer una 
     * validación de tipo.
     * Esta validación es conocida como: TYPE NARROWING
