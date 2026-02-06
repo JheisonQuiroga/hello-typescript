@@ -75,7 +75,7 @@ let data: [string, number, ...boolean[]] = ["status", 200, true, false, true];
 type UserInfo = [name: string, age: number, admin: boolean];
 let userInfo: UserInfo = ["Bob", 25, false];
 
-// Destructuración
+// DESTRUCTURING
 const [userName, userAge2, isUserAdmin] = userInfo;
 
 // También se puede usar la sintaxis de elementos nombrados directamente en la declaración
@@ -118,3 +118,12 @@ function logCoordinate(coord: [x: number, y: number, z?: number]): void {
 
 logCoordinate([5, 10]);
 logCoordinate([5, 10, 15]);
+
+// ============================================
+// 7.1 USE CASE: TUPLES WITH READONLY PROPERTIES
+// ============================================
+
+type Config = readonly [server: string, port: number, useSSL: boolean];
+const config: Config = ["localhost", 8080, true];
+
+// config[0] = "otherhost"; // Esto genera error

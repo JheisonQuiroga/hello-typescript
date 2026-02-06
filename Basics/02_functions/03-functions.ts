@@ -1,4 +1,6 @@
+// ============================================
 // 1. Functions
+// ============================================
 
 function sayHello( msg?: string ): void {
   const message = msg || "Hello World!";
@@ -128,6 +130,14 @@ console.log(myFunction(1, 3));
 
 myFunction = multiplyNumbers;
 console.log(myFunction(6, 3, 2));
+
+// Tambien se pueden definir funciones con tipos de datos especificos, ej:
+
+type MathOperation = (a: number, b: number) => number;
+
+const operation: MathOperation = (a, b) => a + b;
+
+console.log(operation(5, 10));
 
 /**
  * * 1.7. Function Type Expression
