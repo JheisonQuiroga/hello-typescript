@@ -4,6 +4,7 @@
     // File Layout
     // "rootDir": "./src",
     // "outDir": "./dist",
+    // "outFile": "./main.js"
 
     // Environment Settings
     // See also https://aka.ms/tsconfig/module
@@ -39,6 +40,9 @@
     // "noFallthroughCasesInSwitch": true,
     // "noPropertyAccessFromIndexSignature": true,
 
+    // Comments
+    "removeComments": true,
+
     // Recommended Options
     "strict": true,
     "noImplicitAny": false, /* Permite expresiones y declaraciones de Tipo Any 
@@ -53,6 +57,12 @@
     "skipLibCheck": true,
 
     // Decorators
-    "experimentalDecorators": true
-  }
+    "experimentalDecorators": true,
+
+  }, 
+  // Exclude folder or files
+  "exclude": [
+      "node_modules"
+  ], 
+  // "include": []
 }
