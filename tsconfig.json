@@ -63,6 +63,10 @@
   // Exclude folder or files
   "exclude": [
       "node_modules"
-  ], 
-  // "include": []
+  ],
+  // Ignora todo lo demás y compila únicamente lo siguiente
+  "include": [
+    "src/**/*",
+    "Basics/**/*"
+  ]
 }
