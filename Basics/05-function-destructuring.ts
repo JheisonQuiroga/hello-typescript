@@ -44,4 +44,25 @@ console.log(`Tax: ${taxTotal}`);
 
 console.log({result});
 
+// =====================================
+
+type User = {
+  name: string
+  lastname: string
+  age: number
+}
+
+const user: User = {
+  name: "Duban",
+  lastname: "Quiroga",
+  age: 27,
+}
+
+function printUserName({name, ...rest}: User) {
+  console.log(name);
+  console.log(rest);
+}
+
+printUserName(user);
+
 // export {};
