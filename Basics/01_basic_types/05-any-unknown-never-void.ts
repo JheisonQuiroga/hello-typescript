@@ -3,7 +3,7 @@
 // ============================================
 
 /* El tipo de dato Any se propaga, es decir que es contagioso, 
-es por eso mismo que lo recomendable, es evitar utilizarlo 
+es por eso mismo que lo recomendable, evitar utilizarlo 
 */
 
 let anyThing: any = "Hola";

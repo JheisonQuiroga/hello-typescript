@@ -1,4 +1,4 @@
-import { Product, taxCalculation } from './05-function-destructuring.js';
+import { Product, taxCalculation } from './05_destructuring/01-function-destructuring.js';
 
 const shoppingCart: Product[] = [
   {

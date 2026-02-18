@@ -12,3 +12,4 @@ import '../Basics/02_functions/03-functions.js';
 import '../Basics/02_functions/04-exercise.js';
 import '../Basics/03_objects/01-objects.js';
 import '../Basics/01_basic_types/05-any-unknown-never-void.js';
+import '../Basics/05_destructuring/02-arrays-destructuring.js';
