@@ -48,6 +48,7 @@ console.log(Person.breed);
 class Hero {
 
   public person: Person;
+  static breed: string = "Superhuman";
 
   constructor(private power: string, public realName: string, person: Person, age?: number ) {
     this.person = person;
@@ -59,6 +60,11 @@ class Hero {
 
   public showPower(): string {
     return `My power is ${ this.power}`;
+  }
+
+  // Static method
+  static returnClassName(): string {
+    return this.name;
   }
 }
 
@@ -72,3 +78,7 @@ const ironman = new Hero('Technology', 'Ironman', tony, 50);
 console.log(ironman.person.greet());
 console.log(ironman.realName);
 console.log(ironman.showPower());
+console.log(Hero.breed);
+console.log(Hero.returnClassName());
+
+export {};
