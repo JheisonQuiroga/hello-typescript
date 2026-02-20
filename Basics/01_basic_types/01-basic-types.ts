@@ -115,3 +115,5 @@ level = "high";
 
 // Se utiliza el export para convertir el archivo en un módulo.
 export {};
+
+const myVar: any = "Hello";

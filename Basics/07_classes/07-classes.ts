@@ -5,6 +5,7 @@ export class Person {
   public lastName: string;
   // es lo mismo a age?: number;
   private age: number | undefined;
+  static breed: string = "Human";
 
   // Constructor
   constructor( name: string, lastName:string, age?: number ) {
@@ -25,6 +26,8 @@ export class Person {
     this.age = age;
   }
 }
+
+console.log(Person.breed);
 
 // Inheritance
 
