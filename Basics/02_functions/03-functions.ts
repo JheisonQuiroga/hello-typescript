@@ -122,6 +122,13 @@ fullName("Duban", "Quiroga");
 
 let myFunction: Function
 
+// Definiendo la firma o el tipo de una función. Esto es conocido como: "Function Type Expression"
+
+let otherFunction: (msg: string) => string;
+
+otherFunction = (msg: string) => `Message: ${msg}`;
+console.log(otherFunction("Hello TypeScript!"));
+
 myFunction = sayHello;
 myFunction();
 
@@ -172,5 +179,29 @@ myFunct.description = "Default description";
 
 doSomething(myFunct);
 
+// 1.9 Return Objects
+
+/* Las funciones pueden retornar objetos con tipos especificos. 
+  * Los parentesis indican que se está retornando un objeto literal con un return implicito 
+*/
+
+type User = {
+  uid: number;
+  name: string;
+}
+
+function getUser ( id: number ): User {
+  return {
+    uid: id,
+    name: "John Doe",
+  }
+} 
+
+const getUser2 = ( id: number ): User => ({
+  uid: id,
+  name: "John Doe",
+})
+
+console.log(getUser(1));
 
 export {};
