@@ -2,7 +2,10 @@
 // 1. Interfaces
 // ============================================
 
-/* Una interfaz es otra forma de definir la firma de un tipo de objeto. */
+/* Una interfaz es otra forma de definir la firma de un tipo de objeto. 
+  Las interfaces son similares a los type aliases, pero tienen algunas diferencias clave.
+  - Pueden ser extendidas, puedem fusionarse, solo declaran la firma de objetos.
+*/
 
 interface User {
   readonly id: number;
@@ -55,7 +58,8 @@ const user2: User2 = {
   age: 0
 }
 
-// 1.1. Una interfaz puede fusionarse
+// 1.1. Declaration Merging 
+// Una interfaz puede fusionarse
 
 interface Hero {
   name: string;
