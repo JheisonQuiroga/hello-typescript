@@ -1,4 +1,5 @@
 import 'dotenv/config';
+import type { PokemonData } from './02-interfaces-data.js';
 
 (()=> {
   
@@ -23,6 +24,33 @@ import 'dotenv/config';
     })
     .catch((error) => console.error(error));
     
+  // Utilizando la API DE Pokemon
+  
+  function getPokemonData(pokemonName: string) {
+    const url = `https://pokeapi.co/api/v2/pokemon/${pokemonName}`;
+
+    const response = fetch(url)
+
+    response.then((res) => {
+      if (!res.ok) {
+        throw new Error(`Error fetching data for ${pokemonName}: ${res.status}`);
+      }
+
+      return res.json();
+
+    })
+    .then((data: PokemonData) => {
+      // console.log(data);
+      console.log(data.name);
+      console.log(data.abilities);
+    })
+    .catch((error) => {
+      console.log(error.message);
+    })
+  }
+    
+  getPokemonData('pikachu');
+
 })();
 
 export {};
