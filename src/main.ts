@@ -15,4 +15,4 @@
 // import '../Basics/05_destructuring/02-arrays-destructuring.js';
 // import '../Basics/05_destructuring/03-for.js';
 // import '../Basics/03_objects/04-object-destructuring.js';
-import '../Basics/12-async/02-fetch-api.js';
+import '../Basics/12-async/03-async-await.js';
