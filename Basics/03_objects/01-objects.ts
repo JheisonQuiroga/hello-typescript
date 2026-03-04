@@ -231,4 +231,21 @@ const newUser: UserEntity = {
   dateOfBirth: new Date("1998-06-19"),
 }
 
+// ============================================
+// 6. Returning an Implicit Object from a Function 
+// ============================================
+
+/* 
+  * Sintaxis de función que retorna un objeto implicitamente, utilizando el "Abrazo del padre".
+  * En JavaScript una función solo puede retornar un único valor, para ello se utiliza el "Abrazo del padre", 
+  * el cual envuelve varios valores en un objeto, para poder retornarlos como un solo valor. 
+*/
+
+const getUser = () => ({
+  id: 0,
+  username: "",
+  email: "",
+  isDeveloper: false
+})
+
 export {};
