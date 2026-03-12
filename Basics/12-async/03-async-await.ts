@@ -29,3 +29,8 @@ const getPokemonData = async (pokemonName: string): Promise<PokemonData> => {
 */
 
 getPokemonData('pikachu').then(console.log)
+
+const myArray = ["Banana", "Strawberry", "Watermelon"]
+
+// Esto imprime el valor, indice, y el array respectivamente.
+myArray.forEach(console.log);
